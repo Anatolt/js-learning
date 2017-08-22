@@ -1,0 +1,22 @@
+<html>
+<body>
+<script>
+var login = prompt('Введите имя','Директор')
+if (login == 'Вася') {
+  message = 'Привет';
+} else if (login == 'Директор') {
+  message = 'Здравствуйте';
+} else if (login == '') {
+  message = 'Нет логина';
+} else {
+  message = 'Чет не то';
+}
+/* var message = (login == 'Вася') ? 'Привет':
+login == 'Директор' ? 'Здравствуйте':
+login == '' ? 'Нет логина':
+'Чет не то'; */
+
+alert(message)
+</script>
+</body>
+</html>

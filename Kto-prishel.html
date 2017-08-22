@@ -1,0 +1,22 @@
+<html>
+<body>
+	<script>
+		var who = prompt('Кто пришел?','admin');
+		if (who == 'admin') {
+			var password = prompt('Пароль?','Черный Властелин');
+			if (password == 'Черный Властелин') {
+				alert('Добро пожаловать');
+			} else if (password == null) {
+				alert('Вход отменен. Вы нажали Escape');
+			} else {
+				alert('Пароль не верен');
+			}
+		} else if (who == null) {
+			alert('Вход отменен. Вы нажали Escape');
+		} else {
+			alert('Я вас не знаю');
+		}
+		// alert(who);
+	</script>
+</body>
+</html>
