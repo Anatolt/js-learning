@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Проверка if вне диапазона с использованием !</title>
+</head>
+<body>
+Проверка if вне диапазона с использованием !<br>
+<a href="https://learn.javascript.ru/logical-ops#проверка-if-вне-диапазона">сылка на урок</a>
+<script type="text/javascript">
+	var age = prompt('Введите возраст','28')
+	var message
+	if (!(age >=14 && age <= 90)) {
+		message = 'Возраст ' + age + ' вне диапазона между 14 и 90';
+	} else {
+		message = 'Кажись возраст ' + age + ' ПОПАЛ в диапазон между 14 и 90'
+	}
+	alert (message);
+</script>
+</body>
+</html>
