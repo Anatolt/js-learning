@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Вопросник по преобразованиям, для примитивов</title>
+</head>
+<body>
+Вопросник по преобразованиям, для примитивов <a href="https://learn.javascript.ru/types-conversion#вопросник-по-преобразованиям-для-примитивов">ссылка на урок</a>
+<script type="text/javascript">
+// первое значение в каменте - мой ответ. второе - правильный
+document.write('<br>'); document.write("" + 1 + 0); // 1 10
+document.write('<br>'); document.write("" - 1 + 0); // -1 -1
+document.write('<br>'); document.write(true + false); //true 1
+document.write('<br>'); document.write(6 / "3"); //2 2
+document.write('<br>'); document.write("2" * "3"); //6 6
+document.write('<br>'); document.write(4 + 5 + "px"); //10 9px
+document.write('<br>'); document.write("$" + 4 + 5); //"$45" $45
+document.write('<br>'); document.write();
+document.write('<br>'); document.write("4" - 2); //"" 2
+document.write('<br>'); document.write();
+document.write('<br>'); document.write("4px" - 2); //"4" NaN
+document.write('<br>'); document.write();
+document.write('<br>'); document.write(7 / 0);//NaN Infinity
+document.write('<br>'); document.write();
+document.write('<br>'); document.write("  -9\n" + 5);//" -9\n5" -9 5
+document.write('<br>'); document.write("  -9\n" - 5);//"" -14
+document.write('<br>'); document.write(5 && 2);//5 2
+document.write('<br>'); document.write();
+document.write('<br>'); document.write(2 && 5);//5 5
+document.write('<br>'); document.write();
+document.write('<br>'); document.write(5 || 0);//0 5
+document.write('<br>'); document.write();
+document.write('<br>'); document.write(0 || 5);//5 5
+document.write('<br>'); document.write(null + 1);//1 1
+document.write('<br>'); document.write(undefined + 1);//1 NaN
+document.write('<br>'); document.write(null == "\n0\n");//true false
+document.write('<br>'); document.write(+null == +"\n0\n");//true true
+</script>
+</body>
+</html>
