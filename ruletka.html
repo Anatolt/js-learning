@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Рулетка</title>
+</head>
+<body>
+<h1>Рулетка</h1>
+<h3>Что-то с ней не так. Я чаще выигрываю чем проигрываю</h3>
+	<script type="text/javascript" >
+		function rand(min, max) {return Math.floor(Math.random() * (max - min)) + min;}
+		var limit = 100;
+		var winCnt = 0;
+		var loseCnt = 0;
+		var bet = 1;
+		var money = 20000;
+		var ourColor = 1; console.log("наш цвет:"+ourColor); //ставим на нечетные
+		do {
+			if (bet < 1000) {
+				var roll = rand(0,36);
+				if (roll == 0) {
+					money = money - bet;
+					bet *= 2;
+					loseCnt += 1; 
+					document.write(money+"$ Выпало сраное ЗЕРО. Удваиваем ставку до "+bet+"<br>");
+					// console.log(money+"$ Выпало сраное ЗЕРО. Удваиваем ставку до "+bet);
+				} else if (roll%2 == ourColor) {
+					money = money + bet*2;
+					winCnt +=1; 
+					document.write(money+"$ ВЫИГРЫШ "+bet*2+" при ставке "+bet+". Выпало "+roll+", и мы ставили на "+ourColor+" Побед:"+winCnt+" Поражений:"+loseCnt+"<br>");
+					//console.log(money+"$ ВЫИГРЫШ "+bet*2+" при ставке "+bet+". Выпало "+roll+", и мы ставили на "+ourColor+" Побед:"+winCnt+" Поражений:"+loseCnt);
+					bet = 1;
+					ourColor = !ourColor; 
+					document.write("наш цвет:"+ourColor+"<br>"); //меняем цвет
+				} else {
+					money = money - bet;
+					loseCnt += 1; 
+					document.write(money+"$ Выпало "+roll+", а мы ставили на "+ourColor+". ТЕРЯЕМ денег "+bet+"<br>");
+					//console.log(money+"$ Выпало "+roll+", а мы ставили на "+ourColor+". ТЕРЯЕМ денег "+bet);
+					bet *= 2;
+				}
+			} else {
+				bet = 1;
+			}
+		} while (money > 0 && winCnt < limit && loseCnt < limit)
+		document.write(money+"$ Последняя ставка: "+bet+" Побед:"+winCnt+" Поражений:"+loseCnt+"<br>");
+	</script>
+</body>
+</html>
